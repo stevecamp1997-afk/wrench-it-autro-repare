@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrench It Auto Repair | North Las Vegas Auto Repair & Service Center</title>
+    <meta name="description" content="North Las Vegas' trusted auto repair shop. Free diagnostics, 12-Month/12,000-mile warranty, 10% competitor price match, brake service, AC repair, and custom color consults. Call (702) 331-7561.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1E293B',
+                            900: '#0F172A',
+                            950: '#0F2A4A',
+                        },
+                        offwhite: '#F8FAFC',
+                        softbg: '#F1F5F9',
+                        charcoal: {
+                            700: '#334155',
+                            800: '#1E293B',
+                        },
+                        copper: {
+                            500: '#EA580C',
+                            600: '#D97706',
+                            700: '#C2410C',
+                        },
+                        softgrey: '#E2E8F0',
+                        bordergrey: '#CBD5E1',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC;
+            color: #334155;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0F2A4A;
+            border-radius: 5px;
+        }
+
+        /* Finish overlays for SVG Visualizer */
+        .finish-gloss { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); }
+        .finish-metallic { filter: contrast(1.15) brightness(1.05) drop-shadow(0 0 8px rgba(255,255,255,0.4)); }
+        .finish-matte { filter: contrast(0.9) brightness(0.95); }
+        .finish-pearl { filter: hue-rotate(15deg) brightness(1.1) drop-shadow(0 2px 10px rgba(217, 119, 6, 0.3)); }
+    </style>
+</head>
+<body class="antialiased selection:bg-copper-600 selection:text-white relative">
+
+    <!-- TOP ANNOUNCEMENT & QUICK CONTACT BANNER -->
+    <div class="bg-navy-950 text-slate-300 text-xs md:text-sm py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-copper-600"></i> 5690 N. Simmons St, Suite 102, North Las Vegas, NV</span>
+                <span class="hidden sm:inline-block text-slate-600">|</span>
+                <span class="flex items-center gap-1.5"><i class="fa-regular fa-clock text-copper-600"></i> Mon - Fri: 8:00 AM - 5:00 PM</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="bg-emerald-950/80 text-emerald-400 border border-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-medium flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Open Today
+                </span>
+                <a href="tel:7023317561" class="font-bold text-white hover:text-copper-600 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-copper-600"></i> (702) 331-7561
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-navy-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 bg-copper-600 rounded-lg flex items-center justify-center text-white shadow-md group-hover:bg-copper-700 transition">
+                        <i class="fa-solid fa-wrench text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-xl font-extrabold text-white tracking-tight uppercase flex items-center gap-1">
+                            Wrench It <span class="text-copper-600 text-xs px-1.5 py-0.5 rounded bg-navy-800 border border-slate-700">LLC</span>
+                        </div>
+                        <div class="text-xs text-slate-400 tracking-wider font-semibold uppercase">Auto Repair • North Las Vegas</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-200">
+                    <a href="#services" class="hover:text-copper-600 transition">Services</a>
+                    <a href="#quote-request" class="hover:text-copper-600 transition">Get Estimate</a>
+                    <a href="#paint-options" class="hover:text-copper-600 transition flex items-center gap-1"><i class="fa-solid fa-palette text-xs text-copper-600"></i> Paint Consult</a>
+                    <a href="#gallery" class="hover:text-copper-600 transition">Work Gallery</a>
+                    <a href="#why-us" class="hover:text-copper-600 transition">Why Us</a>
+                    <a href="#reviews" class="hover:text-copper-600 transition">Reviews</a>
+                    <a href="#faq" class="hover:text-copper-600 transition">FAQ</a>
+                </nav>
+
+                <!-- Desktop CTA Buttons -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="#quote-request" class="bg-copper-600 hover:bg-copper-700 text-white font-semibold px-4 py-2.5 rounded-lg shadow-lg hover:shadow-copper-600/20 transition flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-calculator"></i> Quick Quote
+                    </a>
+                    <a href="tel:7023317561" class="border border-slate-600 hover:border-slate-400 text-slate-200 font-semibold px-4 py-2.5 rounded-lg transition text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-copper-600"></i> Call Shop
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-slate-300 hover:text-white text-2xl focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-navy-900 border-b border-navy-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="#services" class="block text-slate-300 hover:text-white py-2 font-medium border-b border-navy-800">Services</a>
+            <a href="#quote-request" class="block text-slate-300 hover:text-white py-2 font-medium border-b border-navy-800">Get Estimate</a>
+            <a href="#paint-options" class="block text-slate-300 hover:text-white py-2 font-medium border-b border-navy-800">Paint Options & Consult</a>
+            <a href="#gallery" class="block text-slate-300 hover:text-white py-2 font-medium border-b border-navy-800">Work Gallery</a>
+            <a href="#why-us" class="block text-slate-300 hover:text-white py-2 font-medium border-b border-navy-800">Why Us</a>
+            <a href="#reviews" class="block text-slate-300 hover:text-white py-2 font-medium border-b border-navy-800">Customer Reviews</a>
+            <a href="#faq" class="block text-slate-300 hover:text-white py-2 font-medium border-b border-navy-800">FAQ</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="#quote-request" class="w-full bg-copper-600 text-center text-white font-bold py-2.5 rounded-lg shadow">Request Estimate</a>
+                <a href="tel:7023317561" class="w-full bg-navy-800 border border-slate-700 text-center text-slate-200 font-bold py-2.5 rounded-lg"><i class="fa-solid fa-phone text-copper-600 mr-2"></i>Call (702) 331-7561</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-navy-900 text-white overflow-hidden py-16 lg:py-24 border-b border-navy-800">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 z-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900/90 to-navy-900/40 z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/80 border border-slate-700 text-copper-600 text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-shield-halved"></i> North Las Vegas' Trusted Auto Repair Shop
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white">
+                        Honest Repairs, Fair Pricing & <span class="text-transparent bg-clip-text bg-gradient-to-r from-copper-600 to-amber-500">Unmatched Expertise</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        Full-service mechanical diagnosis and automotive care in North Las Vegas, Nevada. Backed by our <strong class="text-white">12-Month / 12,000-Mile Warranty</strong> and our <strong class="text-white">10% Competitor Price Match Guarantee</strong>.
+                    </p>
+
+                    <!-- Key Offers Highlights Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                        <div class="bg-navy-800/60 border border-slate-800 p-3 rounded-lg flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-check text-copper-600 text-lg mt-0.5"></i>
+                            <div>
+                                <div class="font-bold text-sm text-white">FREE Diagnostics</div>
+                                <div class="text-xs text-slate-400">Computer code scans</div>
+                            </div>
+                        </div>
+                        <div class="bg-navy-800/60 border border-slate-800 p-3 rounded-lg flex items-start gap-2.5">
+                            <i class="fa-solid fa-award text-copper-600 text-lg mt-0.5"></i>
+                            <div>
+                                <div class="font-bold text-sm text-white">12-Mo Warranty</div>
+                                <div class="text-xs text-slate-400">12,000-Mile protection</div>
+                            </div>
+                        </div>
+                        <div class="bg-navy-800/60 border border-slate-800 p-3 rounded-lg flex items-start gap-2.5 col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-tags text-copper-600 text-lg mt-0.5"></i>
+                            <div>
+                                <div class="font-bold text-sm text-white">10% Price Match</div>
+                                <div class="text-xs text-slate-400">On written quotes</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call To Actions -->
+                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                        <a href="#quote-request" class="bg-copper-600 hover:bg-copper-700 text-white font-bold px-7 py-3.5 rounded-lg shadow-lg hover:shadow-copper-600/30 transition text-base flex items-center gap-2">
+                            <i class="fa-solid fa-calculator"></i> Request Quote & Upload Photos
+                        </a>
+                        <a href="tel:7023317561" class="bg-navy-800 hover:bg-navy-700 border border-slate-700 text-slate-200 font-bold px-6 py-3.5 rounded-lg transition text-base flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-copper-600"></i> (702) 331-7561
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trust Badge Box Right -->
+                <div class="lg:col-span-5">
+                    <div class="bg-navy-800/90 border border-slate-700 rounded-2xl p-6 shadow-2xl backdrop-blur-sm relative space-y-5">
+                        <div class="flex items-center justify-between border-b border-slate-700 pb-4">
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase font-bold tracking-wider">VERIFIED RATING</span>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <div class="text-2xl font-extrabold text-white">4.8 / 5.0</div>
+                                    <div class="text-amber-400 text-sm flex gap-1">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-emerald-400 bg-emerald-950 border border-emerald-800 px-2.5 py-1 rounded-full font-semibold">Verified Feedback</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <div class="flex items-start gap-3 bg-navy-900/60 p-3 rounded-lg border border-slate-800">
+                                <i class="fa-solid fa-wrench text-copper-600 mt-1"></i>
+                                <span><strong>Brake & AC Inspections:</strong> FREE visual and system pressure checks available daily.</span>
+                            </div>
+                            <div class="flex items-start gap-3 bg-navy-900/60 p-3 rounded-lg border border-slate-800">
+                                <i class="fa-solid fa-car-side text-copper-600 mt-1"></i>
+                                <span><strong>All Makes & Models:</strong> Domestic & foreign car, SUV, and truck servicing.</span>
+                            </div>
+                            <div class="flex items-start gap-3 bg-navy-900/60 p-3 rounded-lg border border-slate-800">
+                                <i class="fa-solid fa-clock text-copper-600 mt-1"></i>
+                                <span><strong>Fast Turnaround:</strong> Same-day servicing for most routine maintenance & repairs.</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-2 text-center text-xs text-slate-400">
+                            Location: 5690 N. Simmons Street, Suite 102, North Las Vegas
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VERIFIED OFFERS BANNER -->
+    <section class="bg-copper-600 text-white py-6 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-copper-500/60">
+                <div class="pt-3 md:pt-0">
+                    <h3 class="font-extrabold text-lg uppercase tracking-wide">FREE Diagnostics Scan</h3>
+                    <p class="text-copper-100 text-sm mt-0.5">Complimentary computer code check & estimate</p>
+                </div>
+                <div class="pt-3 md:pt-0">
+                    <h3 class="font-extrabold text-lg uppercase tracking-wide">FREE Brake & AC Checks</h3>
+                    <p class="text-copper-100 text-sm mt-0.5">Safety & performance inspection at zero cost</p>
+                </div>
+                <div class="pt-3 md:pt-0">
+                    <h3 class="font-extrabold text-lg uppercase tracking-wide">10% Price Match Promise</h3>
+                    <p class="text-copper-100 text-sm mt-0.5">We beat any local competitor's written estimate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADVANCED VEHICLE REPAIR QUOTE REQUEST (WITH REAL JS PHOTO UPLOADS) -->
+    <section id="quote-request" class="py-16 lg:py-20 bg-offwhite">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-copper-600 font-bold text-xs uppercase tracking-widest bg-copper-600/10 px-3 py-1 rounded-full border border-copper-600/20">Fast & Interactive</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-2">Request a Vehicle Repair Estimate</h2>
+                <p class="text-slate-600 mt-2 text-base">Fill out your details and upload photos of your vehicle issue or damage. Our certified mechanics will review and respond promptly.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl border border-softgrey p-6 sm:p-10">
+                <form id="quoteForm" onsubmit="handleQuoteSubmit(event)" class="space-y-8">
+                    
+                    <!-- STEP 1: Personal Contact Information -->
+                    <div>
+                        <h3 class="text-lg font-bold text-navy-900 flex items-center gap-2 border-b border-softgrey pb-2 mb-4">
+                            <span class="w-7 h-7 rounded-full bg-navy-900 text-white text-xs flex items-center justify-center font-bold">1</span>
+                            Personal Information
+                        </h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Full Name *</label>
+                                <input type="text" id="quoteName" required placeholder="e.g. Michael Miller" class="w-full px-4 py-3 rounded-lg border border-bordergrey bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Phone Number *</label>
+                                <input type="tel" id="quotePhone" required placeholder="(702) 000-0000" class="w-full px-4 py-3 rounded-lg border border-bordergrey bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Email Address *</label>
+                                <input type="email" id="quoteEmail" required placeholder="name@example.com" class="w-full px-4 py-3 rounded-lg border border-bordergrey bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Vehicle Specification -->
+                    <div>
+                        <h3 class="text-lg font-bold text-navy-900 flex items-center gap-2 border-b border-softgrey pb-2 mb-4">
+                            <span class="w-7 h-7 rounded-full bg-navy-900 text-white text-xs flex items-center justify-center font-bold">2</span>
+                            Vehicle Details
+                        </h3>
+                        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Year *</label>
+                                <input type="number" id="vehicleYear" min="1980" max="2027" required placeholder="e.g. 2018" class="w-full px-4 py-3 rounded-lg border border-bordergrey bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Make *</label>
+                                <input type="text" id="vehicleMake" required placeholder="Ford, Toyota..." class="w-full px-4 py-3 rounded-lg border border-bordergrey bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Model *</label>
+                                <input type="text" id="vehicleModel" required placeholder="F-150, Camry..." class="w-full px-4 py-3 rounded-lg border border-bordergrey bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Mileage (Opt)</label>
+                                <input type="text" id="vehicleMileage" placeholder="e.g. 85,000" class="w-full px-4 py-3 rounded-lg border border-bordergrey bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                            </div>
+                            <div class="col-span-2 md:col-span-1">
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">VIN (Optional)</label>
+                                <input type="text" id="vehicleVin" maxlength="17" placeholder="17-Digit VIN" class="w-full px-4 py-3 rounded-lg border border-bordergrey bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm uppercase">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Repair Information -->
+                    <div>
+                        <h3 class="text-lg font-bold text-navy-900 flex items-center gap-2 border-b border-softgrey pb-2 mb-4">
+                            <span class="w-7 h-7 rounded-full bg-navy-900 text-white text-xs flex items-center justify-center font-bold">3</span>
+                            Repair Information
+                        </h3>
+                        <div class="grid md:grid-cols-3 gap-4 mb-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Category *</label>
+                                <select id="repairCategory" required class="w-full px-4 py-3 rounded-lg border border-bordergrey bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                                    <option value="">Select Service Needed...</option>
+                                    <option value="Brake Service & Repair">Brake Service & Repair</option>
+                                    <option value="A/C & Heating Systems">A/C & Heating Systems</option>
+                                    <option value="Diagnostics & Engine Repair">Diagnostics & Engine Repair</option>
+                                    <option value="Preventive Maintenance">Preventive Maintenance</option>
+                                    <option value="Steering & Suspension">Steering & Suspension</option>
+                                    <option value="Electrical & Battery Service">Electrical & Battery Service</option>
+                                    <option value="Paint / Color Consult Request">Paint & Color Consult Request</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Is Vehicle Drivable? *</label>
+                                <select id="drivableStatus" required class="w-full px-4 py-3 rounded-lg border border-bordergrey bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                                    <option value="Yes">Yes, vehicle is drivable</option>
+                                    <option value="No">No, needs towing or off-road</option>
+                                    <option value="Unsure">Unsure / Hard to start</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Preferred Date</label>
+                                <input type="date" id="prefDate" class="w-full px-4 py-3 rounded-lg border border-bordergrey bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Description of Issue / Noises / Symptoms *</label>
+                            <textarea id="issueDescription" rows="3" required placeholder="Please describe warning lights, sounds, leaks, or damage location..." class="w-full px-4 py-3 rounded-lg border border-bordergrey bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: Interactive Photo Upload System -->
+                    <div>
+                        <h3 class="text-lg font-bold text-navy-900 flex items-center gap-2 border-b border-softgrey pb-2 mb-2">
+                            <span class="w-7 h-7 rounded-full bg-navy-900 text-white text-xs flex items-center justify-center font-bold">4</span>
+                            Vehicle Photo Upload (Optional but Recommended)
+                        </h3>
+                        <p class="text-xs text-slate-500 mb-4">
+                            Encouraged photos: Vehicle exterior, damaged areas, scratches/dents, dashboard warning light indicators, or engine bay leaks. Supported: JPG, PNG, WEBP (Max 5 files).
+                        </p>
+
+                        <!-- Drag and Drop Dropzone -->
+                        <div id="dropzone" class="border-2 border-dashed border-bordergrey hover:border-copper-600 rounded-xl p-6 text-center bg-slate-50 hover:bg-slate-100/50 transition cursor-pointer relative">
+                            <input type="file" id="photoInput" multiple accept="image/jpeg,image/png,image/webp" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                            <div class="space-y-2 pointer-events-none">
+                                <i class="fa-solid fa-cloud-arrow-up text-3xl text-copper-600"></i>
+                                <div class="text-sm font-bold text-navy-900">Drag & drop vehicle photos here, or <span class="text-copper-600 underline">Browse Files</span></div>
+                                <div class="text-xs text-slate-400">Attach photos of dashboard warning lights, leaks, or body scratches</div>
+                            </div>
+                        </div>
+
+                        <!-- Image Previews Container -->
+                        <div id="previewGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4"></div>
+                    </div>
+
+                    <!-- Selected Paint Option Auto-populated Box (If chosen from section 4) -->
+                    <div id="selectedPaintSummary" class="hidden bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-900 flex justify-between items-center">
+                        <span id="paintSummaryText">Color Preference attached: <strong>None</strong></span>
+                        <button type="button" onclick="clearSelectedPaint()" class="text-red-600 font-bold hover:underline">Remove</button>
+                    </div>
+
+                    <!-- Backend Integration Info Notice -->
+                    <div class="bg-slate-100 border border-slate-300 rounded-lg p-3.5 text-xs text-slate-600 flex items-start gap-2.5">
+                        <i class="fa-solid fa-circle-info text-navy-900 text-base mt-0.5"></i>
+                        <div>
+                            <strong>Form Integration Note:</strong> Ready for backend REST API or Email service (e.g. Formspree/PHPMailer). Submitted client details and uploaded photo previews are captured in JavaScript data state for processing.
+                        </div>
+                    </div>
+
+                    <!-- Form Action Button -->
+                    <div>
+                        <button type="submit" class="w-full bg-copper-600 hover:bg-copper-700 text-white font-extrabold py-4 px-6 rounded-xl shadow-lg hover:shadow-copper-600/30 transition text-lg flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Quote & Inspection Request
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Submission Confirmation Overlay Modal -->
+                <div id="formSuccessModal" class="hidden mt-6 bg-emerald-50 border border-emerald-300 rounded-xl p-6 text-emerald-900 space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xl font-bold">✓</div>
+                        <div>
+                            <h4 class="font-extrabold text-lg">Quote Request Submitted Successfully!</h4>
+                            <p class="text-sm text-emerald-800">Thank you. Wrench It Auto Repair will review your details and photos, then contact you at your phone number or email shorty.</p>
+                        </div>
+                    </div>
+                    <div class="text-xs text-emerald-700 pt-2 border-t border-emerald-200">
+                        Immediate assistance needed? Call our shop directly at <a href="tel:7023317561" class="font-bold underline">(702) 331-7561</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE PAINT & COLOUR OPTIONS FEATURE -->
+    <section id="paint-options" class="py-16 bg-navy-900 text-white relative overflow-hidden border-t border-b border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-copper-600 font-bold text-xs uppercase tracking-widest bg-navy-800 px-3 py-1 rounded-full border border-slate-700">Customization & Consultation</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Paint & Color Consultation Options</h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-2">
+                    Planning touch-ups, refinishing, or color matching? Explore popular automotive shades and finishes below. 
+                    <br><em class="text-xs text-slate-400">*Note: Color selections represent customer preferences for consultation and discussion during estimate review.</em>
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Swatch Controls & Options Left -->
+                <div class="lg:col-span-6 space-y-6 bg-navy-800/80 border border-slate-700 p-6 sm:p-8 rounded-2xl shadow-xl">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-3">Select Color Preference:</label>
+                        <div class="grid grid-cols-4 sm:grid-cols-4 gap-3" id="swatchGrid">
+                            <!-- Swatches loaded dynamically via JS -->
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Select Finish Type:</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                            <button type="button" onclick="setFinish('gloss')" class="finish-btn active bg-navy-900 border border-copper-600 text-white text-xs font-bold py-2 rounded-lg hover:border-copper-600 transition">Gloss</button>
+                            <button type="button" onclick="setFinish('metallic')" class="finish-btn bg-navy-900 border border-slate-700 text-slate-300 text-xs font-bold py-2 rounded-lg hover:border-copper-600 transition">Metallic</button>
+                            <button type="button" onclick="setFinish('matte')" class="finish-btn bg-navy-900 border border-slate-700 text-slate-300 text-xs font-bold py-2 rounded-lg hover:border-copper-600 transition">Matte</button>
+                            <button type="button" onclick="setFinish('pearl')" class="finish-btn bg-navy-900 border border-slate-700 text-slate-300 text-xs font-bold py-2 rounded-lg hover:border-copper-600 transition">Pearl</button>
+                        </div>
+                    </div>
+
+                    <!-- Custom Reference Upload Inputs -->
+                    <div class="pt-2 border-t border-slate-700 space-y-3">
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider">Custom Color Reference / Vehicle Photo:</label>
+                        <input type="file" id="paintRefInput" accept="image/*" class="w-full text-xs text-slate-300 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-copper-600 file:text-white hover:file:bg-copper-700 cursor-pointer">
+                        <input type="text" id="paintNotes" placeholder="Additional paint notes (e.g., Factory paint code PX8)..." class="w-full px-3 py-2 rounded-lg bg-navy-900 border border-slate-700 text-slate-200 text-xs focus:outline-none focus:border-copper-600">
+                    </div>
+
+                    <button type="button" onclick="attachPaintToQuote()" class="w-full bg-copper-600 hover:bg-copper-700 text-white font-bold py-3 rounded-lg text-sm shadow transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-check-circle"></i> Attach Selected Color to Repair Quote
+                    </button>
+                </div>
+
+                <!-- LIVE SVG CAR VISUALIZER RIGHT -->
+                <div class="lg:col-span-6 bg-navy-950 border border-slate-800 rounded-2xl p-6 text-center space-y-4 flex flex-col items-center justify-center min-h-[360px]">
+                    <div class="text-xs uppercase tracking-widest text-slate-400 font-bold">Live Vehicle Color Preview</div>
+                    
+                    <!-- Dynamic Interactive SVG Car Outline -->
+                    <div class="relative w-full max-w-md py-4">
+                        <svg id="carSvg" class="w-full h-auto max-h-56 transition-all duration-300 finish-gloss" viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Shadow -->
+                            <ellipse cx="250" cy="175" rx="210" ry="12" fill="#000000" opacity="0.6"/>
+                            <!-- Main Body Shell (Color Target) -->
+                            <path id="carBody" d="M40 140 L50 100 Q70 80 120 75 L170 45 Q210 35 320 40 L400 70 Q450 75 470 110 L480 140 Q480 155 460 155 L40 155 Z" fill="#0F2A4A" stroke="#1E293B" stroke-width="3"/>
+                            <!-- Roof Accent -->
+                            <path d="M175 48 Q210 38 315 43 L385 70 L130 75 Z" fill="#000000" opacity="0.25"/>
+                            <!-- Windows -->
+                            <path d="M180 52 L245 52 L245 73 L140 75 Z" fill="#94A3B8" opacity="0.8"/>
+                            <path d="M255 52 L310 52 L375 72 L255 73 Z" fill="#94A3B8" opacity="0.8"/>
+                            <!-- Headlight & Taillight -->
+                            <path d="M465 105 Q475 110 475 125 L460 125 Z" fill="#FBBF24"/>
+                            <path d="M45 105 Q35 110 35 125 L50 125 Z" fill="#EF4444"/>
+                            <!-- Wheels -->
+                            <circle cx="120" cy="150" r="30" fill="#1E293B" stroke="#475569" stroke-width="4"/>
+                            <circle cx="120" cy="150" r="14" fill="#94A3B8"/>
+                            <circle cx="380" cy="150" r="30" fill="#1E293B" stroke="#475569" stroke-width="4"/>
+                            <circle cx="380" cy="150" r="14" fill="#94A3B8"/>
+                        </svg>
+                    </div>
+
+                    <!-- Active Color Details Display -->
+                    <div class="bg-navy-900 border border-slate-700 rounded-xl px-4 py-3 w-full max-w-md flex justify-between items-center text-left">
+                        <div>
+                            <div class="text-xs text-slate-400 font-bold uppercase">Selected Color</div>
+                            <div id="activeColorName" class="text-sm font-extrabold text-white">Deep Navy Blue</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xs text-slate-400 font-bold uppercase">Finish</div>
+                            <div id="activeFinishName" class="text-sm font-extrabold text-copper-600 uppercase">Gloss</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE SERVICES SHOWCASE (ALL 6 PRESERVED SERVICES) -->
+    <section id="services" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-copper-600 font-bold text-xs uppercase tracking-widest bg-copper-600/10 px-3 py-1 rounded-full border border-copper-600/20">Full Mechanical Capability</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-2">Comprehensive Automotive Services</h2>
+                <p class="text-slate-600 mt-2 text-base">Expert vehicle care performed by certified mechanics using high-grade replacement parts.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. Brake Service & Repair -->
+                <div class="bg-softbg border border-softgrey rounded-2xl p-7 hover:border-copper-600/50 hover:shadow-xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-navy-900 text-copper-600 flex items-center justify-center text-2xl font-bold mb-5 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-circle-stop"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy-900 mb-2">1. Brake Service & Repair</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">Complete braking system inspections, maintenance, and replacements to keep your vehicle stopping safely.</p>
+                        <ul class="space-y-2 text-xs font-medium text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Brake Pad & Premium Rotor Replacement</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Brake Fluid Flush & Hydraulic Line Bleeding</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Caliper Servicing & ABS System Diagnostics</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> <em>FREE Visual Brake Inspection Included</em></li>
+                        </ul>
+                    </div>
+                    <a href="#quote-request" onclick="selectServiceCategory('Brake Service & Repair')" class="w-full bg-white border border-bordergrey hover:bg-navy-900 hover:text-white text-navy-900 font-bold py-2.5 rounded-lg text-center text-xs transition">Request Brake Quote</a>
+                </div>
+
+                <!-- 2. A/C & Heating Systems -->
+                <div class="bg-softbg border border-softgrey rounded-2xl p-7 hover:border-copper-600/50 hover:shadow-xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-navy-900 text-copper-600 flex items-center justify-center text-2xl font-bold mb-5 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-snowflake"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy-900 mb-2">2. A/C & Heating Systems</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">Stay comfortable in Las Vegas temperatures with complete climate control diagnostics and repairs.</p>
+                        <ul class="space-y-2 text-xs font-medium text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> A/C Refrigerant Leak Detection & Recharge</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Compressor & Condenser Replacement</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Heater Core & Blower Motor Repair</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> <em>FREE A/C Performance Inspection</em></li>
+                        </ul>
+                    </div>
+                    <a href="#quote-request" onclick="selectServiceCategory('A/C & Heating Systems')" class="w-full bg-white border border-bordergrey hover:bg-navy-900 hover:text-white text-navy-900 font-bold py-2.5 rounded-lg text-center text-xs transition">Request A/C Quote</a>
+                </div>
+
+                <!-- 3. Diagnostics & Engine Repair -->
+                <div class="bg-softbg border border-softgrey rounded-2xl p-7 hover:border-copper-600/50 hover:shadow-xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-navy-900 text-copper-600 flex items-center justify-center text-2xl font-bold mb-5 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy-900 mb-2">3. Diagnostics & Engine Repair</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">Advanced computer scanning and mechanical engine repairs to resolve warning lights quickly.</p>
+                        <ul class="space-y-2 text-xs font-medium text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Check Engine Light Scanning & Troubleshooting</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Engine Tune-ups, Spark Plugs & Ignition Coils</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Water Pump, Radiator & Timing Belt Replacement</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> <em>FREE Computer Code Scan</em></li>
+                        </ul>
+                    </div>
+                    <a href="#quote-request" onclick="selectServiceCategory('Diagnostics & Engine Repair')" class="w-full bg-white border border-bordergrey hover:bg-navy-900 hover:text-white text-navy-900 font-bold py-2.5 rounded-lg text-center text-xs transition">Request Engine Quote</a>
+                </div>
+
+                <!-- 4. Preventive Maintenance -->
+                <div class="bg-softbg border border-softgrey rounded-2xl p-7 hover:border-copper-600/50 hover:shadow-xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-navy-900 text-copper-600 flex items-center justify-center text-2xl font-bold mb-5 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-oil-can"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy-900 mb-2">4. Preventive Maintenance</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">Protect your vehicle investment and maintain manufacturer warranties with scheduled fluid and filter care.</p>
+                        <ul class="space-y-2 text-xs font-medium text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Synthetic & Conventional Oil & Filter Change</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Transmission, Coolant & Differential Flushes</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Cabin & Engine Air Filter Replacement</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Multi-Point Vehicle Safety Check</li>
+                        </ul>
+                    </div>
+                    <a href="#quote-request" onclick="selectServiceCategory('Preventive Maintenance')" class="w-full bg-white border border-bordergrey hover:bg-navy-900 hover:text-white text-navy-900 font-bold py-2.5 rounded-lg text-center text-xs transition">Book Maintenance</a>
+                </div>
+
+                <!-- 5. Steering & Suspension -->
+                <div class="bg-softbg border border-softgrey rounded-2xl p-7 hover:border-copper-600/50 hover:shadow-xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-navy-900 text-copper-600 flex items-center justify-center text-2xl font-bold mb-5 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy-900 mb-2">5. Steering & Suspension</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">Restore smooth vehicle handling, correct alignment wear, and improve ride stability.</p>
+                        <ul class="space-y-2 text-xs font-medium text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Shock Absorber & Strut Assembly Replacement</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Control Arms, Ball Joints & Tie Rod Ends</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Power Steering Pump & Rack Pinion Repair</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Steering Wheel Vibration Diagnosis</li>
+                        </ul>
+                    </div>
+                    <a href="#quote-request" onclick="selectServiceCategory('Steering & Suspension')" class="w-full bg-white border border-bordergrey hover:bg-navy-900 hover:text-white text-navy-900 font-bold py-2.5 rounded-lg text-center text-xs transition">Request Suspension Quote</a>
+                </div>
+
+                <!-- 6. Electrical & Battery Service -->
+                <div class="bg-softbg border border-softgrey rounded-2xl p-7 hover:border-copper-600/50 hover:shadow-xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-navy-900 text-copper-600 flex items-center justify-center text-2xl font-bold mb-5 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-car-battery"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy-900 mb-2">6. Electrical & Battery Service</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">Reliable starting and electrical diagnostic services for batteries, alternators, and wiring.</p>
+                        <ul class="space-y-2 text-xs font-medium text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Battery Load Testing & Replacement</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Alternator & Starter Motor Replacement</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Electrical Short & Wiring Repair</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-copper-600"></i> Lighting & Power Accessory Troubleshooting</li>
+                        </ul>
+                    </div>
+                    <a href="#quote-request" onclick="selectServiceCategory('Electrical & Battery Service')" class="w-full bg-white border border-bordergrey hover:bg-navy-900 hover:text-white text-navy-900 font-bold py-2.5 rounded-lg text-center text-xs transition">Request Electrical Quote</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BEFORE-AND-AFTER VEHICLE REPAIR GALLERY -->
+    <section id="gallery" class="py-16 bg-offwhite border-t border-softgrey">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-copper-600 font-bold text-xs uppercase tracking-widest bg-copper-600/10 px-3 py-1 rounded-full border border-copper-600/20">Quality Proof</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-2">Before & After Repair Gallery</h2>
+                <p class="text-slate-600 mt-2 text-base">Examples of mechanical restoration, brake servicing, and paint/refinishing work.</p>
+                
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-6" id="galleryFilter">
+                    <button onclick="filterGallery('all')" class="gallery-btn active bg-navy-900 text-white text-xs font-bold px-4 py-2 rounded-full shadow">All Repairs</button>
+                    <button onclick="filterGallery('mechanical')" class="gallery-btn bg-white border border-bordergrey text-slate-700 text-xs font-bold px-4 py-2 rounded-full hover:bg-navy-900 hover:text-white transition">Mechanical & Brakes</button>
+                    <button onclick="filterGallery('refinishing')" class="gallery-btn bg-white border border-bordergrey text-slate-700 text-xs font-bold px-4 py-2 rounded-full hover:bg-navy-900 hover:text-white transition">Paint & Refinishing</button>
+                    <button onclick="filterGallery('engine')" class="gallery-btn bg-white border border-bordergrey text-slate-700 text-xs font-bold px-4 py-2 rounded-full hover:bg-navy-900 hover:text-white transition">Engine & Electrical</button>
+                </div>
+            </div>
+
+            <!-- Gallery Cards Grid -->
+            <div class="grid md:grid-cols-3 gap-8" id="galleryGrid">
+                
+                <!-- Item 1: Mechanical/Brake -->
+                <div class="gallery-item mechanical bg-white border border-softgrey rounded-2xl overflow-hidden shadow-lg space-y-4 p-4">
+                    <div class="grid grid-cols-2 gap-2 relative">
+                        <div class="relative">
+                            <span class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">BEFORE</span>
+                            <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=400&q=80" alt="Worn vehicle rotor" class="w-full h-36 object-cover rounded-lg">
+                        </div>
+                        <div class="relative">
+                            <span class="absolute top-2 left-2 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">AFTER</span>
+                            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" alt="New ceramic brake rotor installed" class="w-full h-36 object-cover rounded-lg">
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-navy-900 text-base">Rotor & Caliper Replacement</h4>
+                        <p class="text-xs text-slate-500 mt-1">Replaced heavily worn metallic brake rotors with premium coated rotors and ceramic pads.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Paint & Refinishing -->
+                <div class="gallery-item refinishing bg-white border border-softgrey rounded-2xl overflow-hidden shadow-lg space-y-4 p-4">
+                    <div class="grid grid-cols-2 gap-2 relative">
+                        <div class="relative">
+                            <span class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">BEFORE</span>
+                            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=400&q=80" alt="Scratched exterior door panel" class="w-full h-36 object-cover rounded-lg">
+                        </div>
+                        <div class="relative">
+                            <span class="absolute top-2 left-2 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">AFTER</span>
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=80" alt="Refinished glossy door panel" class="w-full h-36 object-cover rounded-lg">
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-navy-900 text-base">Panel Paint Touch-Up & Buffing</h4>
+                        <p class="text-xs text-slate-500 mt-1">Matched clearcoat and eliminated surface scratches with multi-stage paint polishing.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Engine & Electrical -->
+                <div class="gallery-item engine bg-white border border-softgrey rounded-2xl overflow-hidden shadow-lg space-y-4 p-4">
+                    <div class="grid grid-cols-2 gap-2 relative">
+                        <div class="relative">
+                            <span class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">BEFORE</span>
+                            <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=400&q=80" alt="Corroded engine battery terminals" class="w-full h-36 object-cover rounded-lg">
+                        </div>
+                        <div class="relative">
+                            <span class="absolute top-2 left-2 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">AFTER</span>
+                            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=400&q=80" alt="Cleaned and serviced battery wiring" class="w-full h-36 object-cover rounded-lg">
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-navy-900 text-base">Alternator & Charging Repair</h4>
+                        <p class="text-xs text-slate-500 mt-1">Diagnosed no-start issue, replaced failing alternator, and renewed terminal wiring.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US & BUSINESS GUARANTEES -->
+    <section id="why-us" class="py-16 lg:py-24 bg-navy-900 text-white border-t border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-copper-600 font-bold text-xs uppercase tracking-widest bg-navy-800 px-3 py-1 rounded-full border border-slate-700">Wrench It Difference</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Why North Las Vegas Drivers Choose Wrench It</h2>
+                    <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                        At <strong>Wrench It Auto Repair, LLC</strong>, we believe in honest mechanical advice, fair rates, and transparent communication. We never sell services your vehicle doesn't require.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3 bg-navy-800/80 p-4 rounded-xl border border-slate-700">
+                            <i class="fa-solid fa-shield-halved text-copper-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-base">12-Month / 12,000-Mile Warranty</h4>
+                                <p class="text-xs text-slate-300 mt-0.5">All eligible repairs and parts are backed nationwide for complete customer peace of mind.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 bg-navy-800/80 p-4 rounded-xl border border-slate-700">
+                            <i class="fa-solid fa-tags text-copper-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-base">10% Competitor Price Match</h4>
+                                <p class="text-xs text-slate-300 mt-0.5">Bring us any written estimate from a local North Las Vegas repair shop—we will beat it by 10%.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 bg-navy-800/80 p-4 rounded-xl border border-slate-700">
+                            <i class="fa-solid fa-receipt text-copper-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-base">No Hidden Fees & Free Estimates</h4>
+                                <p class="text-xs text-slate-300 mt-0.5">Zero surprise charges. You approve all work in writing before any mechanic begins repairs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Verified Ratings Summary Card Right -->
+                <div class="lg:col-span-6 bg-navy-950 border border-slate-800 p-8 rounded-2xl shadow-2xl space-y-6">
+                    <h3 class="text-xl font-bold text-white border-b border-slate-800 pb-3">Shop Credentials & Business Details</h3>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-navy-900 p-4 rounded-xl border border-slate-800">
+                            <div class="text-xs text-slate-400 font-bold">OPERATING HOURS</div>
+                            <div class="text-sm font-bold text-white mt-1">Mon - Fri: 8:00 AM - 5:00 PM</div>
+                            <div class="text-xs text-slate-500">Sat & Sun: Closed</div>
+                        </div>
+                        <div class="bg-navy-900 p-4 rounded-xl border border-slate-800">
+                            <div class="text-xs text-slate-400 font-bold">BUSINESS ENTITY</div>
+                            <div class="text-sm font-bold text-white mt-1">Wrench It Auto Repair, LLC</div>
+                            <div class="text-xs text-emerald-400">Licensed & Insured</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-slate-300 border-t border-slate-800 pt-4">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-envelope text-copper-600"></i> Direct Shop Email: <a href="mailto:josh@wrenchitautorepair.com" class="text-white font-bold hover:underline">josh@wrenchitautorepair.com</a></div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-phone text-copper-600"></i> Direct Shop Phone: <a href="tel:7023317561" class="text-white font-bold hover:underline">(702) 331-7561</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS (AUTHENTIC VERIFIED FEEDBACK) -->
+    <section id="reviews" class="py-16 bg-offwhite border-t border-softgrey">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-copper-600 font-bold text-xs uppercase tracking-widest bg-copper-600/10 px-3 py-1 rounded-full border border-copper-600/20">Verified Feedback</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-2">What Our Customers Say</h2>
+                <p class="text-slate-600 mt-2 text-base">Authentic 4.8-star reviews from local North Las Vegas drivers.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-white border border-softgrey p-7 rounded-2xl shadow-md space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="text-amber-400 text-sm flex gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-xs text-slate-400 font-medium">Google Review</span>
+                    </div>
+                    <p class="text-slate-700 text-sm italic leading-relaxed">
+                        "This is the best place to get the best quality vehicle service. Josh and the team are honest and efficient."
+                    </p>
+                    <div class="border-t border-slate-100 pt-3 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-navy-900 text-white font-bold text-xs flex items-center justify-center">VC</div>
+                        <div>
+                            <div class="font-bold text-xs text-navy-900">Verified Customer</div>
+                            <div class="text-[10px] text-slate-400">North Las Vegas Local</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-softgrey p-7 rounded-2xl shadow-md space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="text-amber-400 text-sm flex gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-xs text-slate-400 font-medium">Google Review</span>
+                    </div>
+                    <p class="text-slate-700 text-sm italic leading-relaxed">
+                        "Very good repair shop, excellent service, and very fair pricing. They don't try to upsell anything you don't need."
+                    </p>
+                    <div class="border-t border-slate-100 pt-3 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-navy-900 text-white font-bold text-xs flex items-center justify-center">LD</div>
+                        <div>
+                            <div class="font-bold text-xs text-navy-900">Verified Local Driver</div>
+                            <div class="text-[10px] text-slate-400">Repeat Customer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-softgrey p-7 rounded-2xl shadow-md space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="text-amber-400 text-sm flex gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-xs text-slate-400 font-medium">Google Review</span>
+                    </div>
+                    <p class="text-slate-700 text-sm italic leading-relaxed">
+                        "Wrench It is the most honest auto repair shop I have ever used. They do high quality work at reasonable prices."
+                    </p>
+                    <div class="border-t border-slate-100 pt-3 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-navy-900 text-white font-bold text-xs flex items-center justify-center">CO</div>
+                        <div>
+                            <div class="font-bold text-xs text-navy-900">Local Car Owner</div>
+                            <div class="text-[10px] text-slate-400">North Las Vegas, NV</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section id="faq" class="py-16 bg-white border-t border-softgrey">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-copper-600 font-bold text-xs uppercase tracking-widest bg-copper-600/10 px-3 py-1 rounded-full border border-copper-600/20">Frequently Asked Questions</span>
+                <h2 class="text-3xl font-extrabold text-navy-900 mt-2">Got Questions? We Have Answers.</h2>
+            </div>
+
+            <div class="space-y-4" id="faqAccordion">
+                
+                <div class="border border-bordergrey rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-5 bg-slate-50 hover:bg-slate-100 font-bold text-navy-900 flex justify-between items-center transition text-sm sm:text-base">
+                        <span>Are computer diagnostics and brake inspections really free?</span>
+                        <i class="fa-solid fa-chevron-down text-copper-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 bg-white text-slate-600 text-sm border-t border-bordergrey leading-relaxed">
+                        Yes! We offer initial computer code scans, visual brake inspections, and A/C system performance checks at zero cost to diagnose your vehicle issue and provide an accurate upfront repair quote.
+                    </div>
+                </div>
+
+                <div class="border border-bordergrey rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-5 bg-slate-50 hover:bg-slate-100 font-bold text-navy-900 flex justify-between items-center transition text-sm sm:text-base">
+                        <span>How does the 10% Competitor Price Match Guarantee work?</span>
+                        <i class="fa-solid fa-chevron-down text-copper-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 bg-white text-slate-600 text-sm border-t border-bordergrey leading-relaxed">
+                        If you receive a written repair estimate from another licensed automotive repair shop in the North Las Vegas area using comparable parts, bring it to Wrench It Auto Repair. We will beat their total price by 10%.
+                    </div>
+                </div>
+
+                <div class="border border-bordergrey rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-5 bg-slate-50 hover:bg-slate-100 font-bold text-navy-900 flex justify-between items-center transition text-sm sm:text-base">
+                        <span>What is covered under the 12-Month / 12,000-Mile Warranty?</span>
+                        <i class="fa-solid fa-chevron-down text-copper-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 bg-white text-slate-600 text-sm border-t border-bordergrey leading-relaxed">
+                        Our 12-month or 12,000-mile nationwide warranty covers qualifying replacement parts and labor installed at our shop. If a part fails during normal driving within that window, we fix or replace it at no charge.
+                    </div>
+                </div>
+
+                <div class="border border-bordergrey rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-5 bg-slate-50 hover:bg-slate-100 font-bold text-navy-900 flex justify-between items-center transition text-sm sm:text-base">
+                        <span>Can I upload photos of my damaged car or dashboard warnings?</span>
+                        <i class="fa-solid fa-chevron-down text-copper-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 bg-white text-slate-600 text-sm border-t border-bordergrey leading-relaxed">
+                        Absolutely. You can attach photos of exterior scratches, dents, under-hood leaks, or dashboard warning icons right into our online estimate request form.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION, MAP & FOOTER -->
+    <section class="bg-navy-950 text-white pt-16 pb-12 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 pb-12 border-b border-slate-800">
+                
+                <!-- Shop Contact Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <div class="text-2xl font-extrabold text-white uppercase tracking-tight flex items-center gap-2">
+                            <i class="fa-solid fa-wrench text-copper-600"></i> Wrench It Auto Repair, LLC
+                        </div>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2">
+                            North Las Vegas' independent vehicle repair center for brakes, engine diagnostics, air conditioning, and maintenance.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3 text-sm text-slate-300">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-copper-600 mt-1"></i>
+                            <div>
+                                <strong>Shop Address:</strong><br>
+                                5690 N. Simmons Street, Suite 102<br>North Las Vegas, NV 89031
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-copper-600"></i>
+                            <div>
+                                <strong>Phone:</strong> <a href="tel:7023317561" class="text-white hover:text-copper-600 font-bold">(702) 331-7561</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-copper-600"></i>
+                            <div>
+                                <strong>Email:</strong> <a href="mailto:josh@wrenchitautorepair.com" class="text-white hover:text-copper-600 font-bold">josh@wrenchitautorepair.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-regular fa-clock text-copper-600 mt-1"></i>
+                            <div>
+                                <strong>Business Hours:</strong><br>
+                                Monday – Friday: 8:00 AM – 5:00 PM<br>
+                                Saturday & Sunday: Closed
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed Column -->
+                <div class="lg:col-span-7">
+                    <div class="w-full h-72 sm:h-80 rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
+                        <iframe 
+                            title="Wrench It Auto Repair Location Map"
+                            src="https://maps.google.com/maps?q=5690+N+Simmons+St+%23102+North+Las+Vegas+NV+89031&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            class="w-full h-full border-0" 
+                            loading="lazy" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Copyright Bar -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <div>
+                    &copy; 2026 Wrench It Auto Repair, LLC. All rights reserved.
+                </div>
+                <div class="flex gap-4">
+                    <span>5690 N. Simmons St #102, North Las Vegas, NV 89031</span>
+                    <span>•</span>
+                    <a href="tel:7023317561" class="hover:text-slate-300">(702) 331-7561</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING CALL BUTTON FOR MOBILE SCREENS -->
+    <a href="tel:7023317561" class="sm:hidden fixed bottom-5 right-5 z-50 bg-copper-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-copper-700 transition">
+        <i class="fa-solid fa-phone text-xl"></i>
+    </a>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- 1. Mobile Menu Toggle ---
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark';
+            }
+        });
+
+        // --- 2. Photo Upload Drag & Drop Preview System ---
+        const photoInput = document.getElementById('photoInput');
+        const previewGrid = document.getElementById('previewGrid');
+        let uploadedFiles = [];
+
+        photoInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+
+        function handleFiles(files) {
+            const validTypes = ['image/jpeg', 'image/png', 'image/webp'];
+            Array.from(files).forEach(file => {
+                if (uploadedFiles.length >= 5) {
+                    alert('Maximum of 5 vehicle images allowed.');
+                    return;
+                }
+                if (!validTypes.includes(file.type)) {
+                    alert(`File ${file.name} is not a valid JPG, PNG, or WEBP image.`);
+                    return;
+                }
+
+                uploadedFiles.push(file);
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const previewIndex = uploadedFiles.length - 1;
+                    const card = document.createElement('div');
+                    card.className = 'relative group bg-slate-100 rounded-lg overflow-hidden border border-bordergrey h-24';
+                    card.id = `preview-${previewIndex}`;
+                    card.innerHTML = `
+                        <img src="${e.target.result}" class="w-full h-full object-cover">
+                        <button type="button" onclick="removeImage(${previewIndex})" class="absolute top-1 right-1 bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs shadow hover:bg-red-700 transition">✕</button>
+                    `;
+                    previewGrid.appendChild(card);
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        function removeImage(index) {
+            uploadedFiles.splice(index, 1);
+            renderPreviews();
+        }
+
+        function renderPreviews() {
+            previewGrid.innerHTML = '';
+            const filesToReRender = [...uploadedFiles];
+            uploadedFiles = [];
+            handleFiles(filesToReRender);
+        }
+
+        // --- 3. Interactive Paint Swatches & SVG Car Visualizer ---
+        const swatches = [
+            { name: 'Metallic Midnight Blue', hex: '#0F2A4A' },
+            { name: 'Gloss Pearl White', hex: '#F8FAFC' },
+            { name: 'Satin Charcoal Graphite', hex: '#334155' },
+            { name: 'Burnt Copper Orange', hex: '#EA580C' },
+            { name: 'Deep Crimson Pearl', hex: '#991B1B' },
+            { name: 'Matte Nardo Grey', hex: '#64748B' },
+            { name: 'Emerald Metallic', hex: '#065F46' },
+            { name: 'Custom Shade Consult', hex: '#1E293B' }
+        ];
+
+        let selectedColor = swatches[0];
+        let selectedFinish = 'gloss';
+
+        const swatchGrid = document.getElementById('swatchGrid');
+        const carBody = document.getElementById('carBody');
+        const carSvg = document.getElementById('carSvg');
+        const activeColorName = document.getElementById('activeColorName');
+        const activeFinishName = document.getElementById('activeFinishName');
+
+        function initSwatches() {
+            swatchGrid.innerHTML = '';
+            swatches.forEach((s, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `w-full h-10 rounded-lg border-2 transition transform hover:scale-105 flex items-center justify-center ${idx === 0 ? 'border-copper-600 ring-2 ring-copper-600/50' : 'border-slate-700'}`;
+                btn.style.backgroundColor = s.hex;
+                btn.title = s.name;
+                btn.onclick = () => selectColor(s, btn);
+                swatchGrid.appendChild(btn);
+            });
+        }
+        initSwatches();
+
+        function selectColor(colorObj, btnElement) {
+            selectedColor = colorObj;
+            document.querySelectorAll('#swatchGrid button').forEach(b => {
+                b.className = 'w-full h-10 rounded-lg border-2 border-slate-700 transition transform hover:scale-105';
+            });
+            btnElement.className = 'w-full h-10 rounded-lg border-2 border-copper-600 ring-2 ring-copper-600/50 transition transform hover:scale-105';
+
+            carBody.setAttribute('fill', colorObj.hex);
+            activeColorName.innerText = colorObj.name;
+        }
+
+        function setFinish(finishType) {
+            selectedFinish = finishType;
+            activeFinishName.innerText = finishType;
+            carSvg.className = `w-full h-auto max-h-56 transition-all duration-300 finish-${finishType}`;
+            
+            document.querySelectorAll('.finish-btn').forEach(btn => {
+                btn.className = 'finish-btn bg-navy-900 border border-slate-700 text-slate-300 text-xs font-bold py-2 rounded-lg hover:border-copper-600 transition';
+            });
+            event.target.className = 'finish-btn active bg-navy-900 border border-copper-600 text-white text-xs font-bold py-2 rounded-lg hover:border-copper-600 transition';
+        }
+
+        function attachPaintToQuote() {
+            const summary = document.getElementById('selectedPaintSummary');
+            const summaryText = document.getElementById('paintSummaryText');
+            summaryText.innerHTML = `Color Consultation Requested: <strong>${selectedColor.name}</strong> (${selectedFinish.toUpperCase()} Finish)`;
+            summary.classList.remove('hidden');
+            
+            // Auto scroll to quote form
+            document.getElementById('quote-request').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function clearSelectedPaint() {
+            document.getElementById('selectedPaintSummary').classList.add('hidden');
+        }
+
+        function selectServiceCategory(categoryName) {
+            document.getElementById('repairCategory').value = categoryName;
+        }
+
+        // --- 4. Quote Form Submission Handler ---
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            const modal = document.getElementById('formSuccessModal');
+            modal.classList.remove('hidden');
+            modal.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // --- 5. Gallery Category Filtering ---
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.gallery-btn');
+
+            buttons.forEach(b => {
+                b.className = 'gallery-btn bg-white border border-bordergrey text-slate-700 text-xs font-bold px-4 py-2 rounded-full hover:bg-navy-900 hover:text-white transition';
+            });
+            event.target.className = 'gallery-btn active bg-navy-900 text-white text-xs font-bold px-4 py-2 rounded-full shadow';
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // --- 6. FAQ Accordion Toggle ---
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+</html>
